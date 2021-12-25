@@ -46,7 +46,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function BlogDetails({ blog }) {
-  if (!blod) return <Skeleton />
+  if (!blog) return <Skeleton />
 
   const { featureImage, title, tags, method } = blog.fields
   return (
