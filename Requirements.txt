@@ -1,0 +1,6 @@
+## Project Requirements
+
+1. Mantener diseño
+2. Eliminar contacto
+3. Añadir numero de teléfono y mantener el botón de enviar correo
+4. Change name from Actualidad a Noticias. Esto seria el Blog.

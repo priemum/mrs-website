@@ -7,10 +7,10 @@ export default function Layout({ children }) {
         <Link href="/">
           <a>
             <h1>
-              <span>Just Add</span>
-              <span>Marmite</span>
+              <span>Abogados y Consultores</span>
+              <span>MRS Assessors</span>
             </h1>
-            <h2>Spread The Joy</h2>
+            <h2>Especialistas en Función Pública y Derecho Administrativo</h2>
           </a>
         </Link>
       </header>
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       </div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite :)</p>
+        <p>© 2021 Copyright: mrsassessors.com</p>
       </footer>
     </div>
   )
