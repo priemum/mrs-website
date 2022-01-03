@@ -1,0 +1,11 @@
+{
+  "locales": ["ca", "es"],
+  "defaultLocale": "ca",
+  "pages": {
+    "*": ["common"],
+    "/": ["home"],
+    "/about": ["about"],
+    "/blog": ["blog"],
+    "/policy": ["policy"]
+  }
+}
