@@ -1,16 +1,35 @@
 import useTranslation from 'next-translate/useTranslation'
+import { createClient } from "contentful"
 import styles from '../styles/Home.module.css'
 import Divider from "../components/Divider"
 import Image from 'next/image'
 
-const About = () => {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY
+  })
+
+  const genericImages = await client.getEntries({
+    content_type: 'genericImages',
+    'fields.location': 'About'
+  })
+  
+  return {
+    props: {
+      genericImg: genericImages.items[0],
+    }
+  }
+}
+
+const About = ({ genericImg }) => {
 
   const { t } = useTranslation()
 
   return (
     <div>
       <div className={styles.imageContainer}>
-        <Image src='/about-placeholder.jpg' width="100%" height="100%" layout="responsive" objectFit="cover" />
+        <Image src={'https:' + genericImg.fields.image.fields.file.url} width="100%" height="100%" layout="responsive" objectFit="cover" />
       </div>
       <Divider styles={styles}/>
       <div className={styles.section}>

@@ -1,20 +1,53 @@
 import useTranslation from 'next-translate/useTranslation'
 import { Container, Row, Col, Tabs, Tab, Card, Button } from 'react-bootstrap'
 import Slider from '../components/Slider'
+import { createClient } from "contentful"
 import styles from '../styles/Home.module.css'
 import Divider from "../components/Divider"
 import Team from '../components/Team'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Main() {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY
+  })
+
+  const slides = await client.getEntries({ content_type: 'slider' })
+  const genericImages = await client.getEntries({
+    content_type: 'genericImages',
+    'fields.location': 'Main'
+  })
+  const profileData = await client.getEntries({ content_type: 'team' })
+  let profiles = {
+    ripalta: null,
+    sais: null,
+    gil: null,
+    martinez: null
+  }
+
+  profileData.items.map((profile) => {
+    profiles[profile.fields.profileName] = profile.fields.profile.fields.file.url
+  })
+
+  return {
+    props: {
+      sliderImgs: slides.items,
+      genericImg: genericImages.items[0],
+      profiles
+    }
+  }
+}
+
+export default function Main({ sliderImgs, genericImg, profiles }) {
 
   const { t } = useTranslation()
 
   return (
     <div>
       {/* slider */}
-      <Slider />
+      <Slider slides={sliderImgs} />
       <Divider styles={styles}/>
 
       {/* description */}
@@ -26,7 +59,7 @@ export default function Main() {
             <Row>
               <Col md={6}>
                 <div className={styles.imageRight}>
-                <Image src='/about-placeholder.jpg' width={500} height={300} />
+                <Image src={'https:' + genericImg.fields.image.fields.file.url} width={500} height={300} />
                 </div>
               </Col>
               <Col md={6}>
@@ -145,7 +178,7 @@ export default function Main() {
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>{t('common:team')}</h2>
         <div className={styles.textSection}>
-          <Team />
+          <Team profiles={profiles} />
         </div>
       </div>
       <span id="contact" />
@@ -169,7 +202,7 @@ export default function Main() {
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.6659586374553!2d2.8366444158267274!3d41.70614637923619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb17400ec35253%3A0x689006a99e92cb89!2sMRS%20Assessors!5e0!3m2!1sen!2ses!4v1641165940319!5m2!1sen!2ses"
                     className={styles.mapsEmbed}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
                   />
                   <Card.Body>
@@ -190,7 +223,7 @@ export default function Main() {
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.9934371028303!2d2.8462348158265196!3d41.69907737923678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb173097443d4d%3A0x3b897f62f299b8b8!2sPasseig%20de%20Jacint%20Verdaguer%2C%208%2C%2017310%20Lloret%20de%20Mar%2C%20Girona!5e0!3m2!1sen!2ses!4v1641166537812!5m2!1sen!2ses"
                     className={styles.mapsEmbed}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
                   />
                   <Card.Body>
@@ -211,7 +244,7 @@ export default function Main() {
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.0794710427367!2d2.818731915833568!3d41.97710347921451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae6d90606a499%3A0x61d8c354d402d905!2sCarrer%20Migdia%2C%2016%2C%203%C2%BA%2C%2017002%20Girona!5e0!3m2!1sen!2ses!4v1641166628277!5m2!1sen!2ses"
                     className={styles.mapsEmbed}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
                   />
                   <Card.Body>

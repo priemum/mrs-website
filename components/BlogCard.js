@@ -1,10 +1,14 @@
+import useTranslation from 'next-translate/useTranslation'
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Card, Button } from 'react-bootstrap'
 import styles from '../styles/Blog.module.css'
 import Link from 'next/link'
 
 export default function BlogCard({ blog }) {
 
-  const { title, slug, tags, thumbnail } = blog.fields
+  const { t } = useTranslation()
+  const { title, slug, tags, thumbnail, textPreview } = blog.fields
+
 
   return (
     <Card>
@@ -18,10 +22,10 @@ export default function BlogCard({ blog }) {
         <Card.Title>{title}</Card.Title>
         <Card.Subtitle className={`mb-2 text-muted ${styles.tags}`}>{ tags.join(' - ')}</Card.Subtitle>
         <Card.Text>
-          Some small preview of the text. Lets make it a little longer to see how it look.
+          {textPreview}
         </Card.Text>
         <Link href={'/blogs/' + slug }>
-          <Button className={styles.styledButton}>Leer más</Button>
+          <Button className={styles.styledButton}>{t('blog:readMore')}</Button>
         </Link>
       </Card.Body>
     </Card>

@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 import { createClient } from "contentful"
 import BlogCard from '../components/BlogCard'
 import Divider from "../components/Divider"
@@ -11,14 +12,14 @@ export async function getStaticProps() {
   })
 
   const res = await client.getEntries({ content_type: 'mrsBlog' })
-
   return {
-    props: { blogs: res.items },
-    revalidate: 1
+    props: { blogs: res.items }
   }
 }
 
 export default function Blogs({ blogs }) {
+  const router = useRouter()
+
   return (
     <div className={styles.section}>
       <Divider styles={styles}/>
@@ -28,11 +29,15 @@ export default function Blogs({ blogs }) {
       <Divider styles={styles}/>
         <Container>
           <Row>
-            {blogs.map(blog => (
-              <Col>
-                <BlogCard key={blog.sys.id} blog={blog}/>
-              </Col>
-            ))}
+            {blogs.map(blog => {
+              if (router.locale == blog.fields.language) {
+                return (
+                  <Col md={6} lg={4} className='mb-4'>
+                    <BlogCard key={blog.sys.id} blog={blog}/>
+                  </Col>
+                )
+              }
+            })}
           </Row>
         </Container>
       </div>

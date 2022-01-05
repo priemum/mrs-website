@@ -41,8 +41,7 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { blog: items[0] },
-    revalidate: 1
+    props: { blog: items[0] }
   }
 }
 
@@ -54,7 +53,7 @@ export default function BlogDetails({ blog }) {
     <div className={styles.section}>
       <div className={styles.textSection}>
         <div className={styles.imageContainer}>
-          <Image src={'https:' + featureImage.fields.file.url} layout='fill' className={styles.image}></Image>
+          <Image src={'https:' + featureImage.fields.file.url} width="100%" height="100%" layout="responsive" objectFit="cover" />
         </div>
         <h2 className={styles.blogTitle}>{ title }</h2>
         <ul className={styles.listBorder}>

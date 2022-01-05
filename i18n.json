@@ -5,7 +5,7 @@
     "*": ["common"],
     "/": ["home"],
     "/about": ["about"],
-    "/blog": ["blog"],
+    "/blogs": ["blog"],
     "/policy": ["policy"]
   }
 }
