@@ -1,10 +1,12 @@
 import styles from '../styles/Layout.module.css'
-import Footer from "./Footer"
+import HeadTag from './HeadTag'
 import AppBar from "./AppBar"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
     <div className="content">
+      <HeadTag />
       <AppBar styles={styles} />
       { children }
       <Footer styles={styles} />
