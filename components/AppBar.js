@@ -10,7 +10,7 @@ const AppBar = ({ styles }) => {
   const router = useRouter()
 
   return (
-    <Navbar collapseOnSelect fixed='top' expand="lg" className={styles.navbar}>
+    <Navbar collapseOnSelect expand="lg" className={styles.navbar}>
       <Container>
       <Navbar.Brand href="/" className={styles.navColor}>
         <Image src='/logo.png' width={75} height={75}/>

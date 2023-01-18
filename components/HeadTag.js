@@ -4,7 +4,7 @@ const HeadTag = () => {
   return (
     <Head>
       <title>MRS Assessors</title>
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta 
         property='og:title'
         content='MRS Assessors' 

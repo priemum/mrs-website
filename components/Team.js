@@ -17,8 +17,8 @@ const Team = ({ profiles }) => {
             <h5 className='marginBottomNull'>Rafael Joaquín Ripalta Romeo</h5>
             <span className={styles.highlight}>{t('home:founder')}</span>
             <ul className={`topSpace ${styles.listBorder}`}>
-              {t('home:ripaltaBio').split('&&').map((text) => (
-                <li>{text}</li>
+              {t('home:ripaltaBio').split('&&').map((text, idx) => (
+                <li key={idx}>{text}</li>
               ))}
             </ul>
           </div>
@@ -29,8 +29,8 @@ const Team = ({ profiles }) => {
             <h5 className='marginBottomNull'>Sebastián Martínez de Trincheria</h5>
             <span className={styles.highlight}>{t('home:founder')}</span>
             <ul className={`topSpace ${styles.listBorder}`}>
-              {t('home:martinezBio').split('&&').map((text) => (
-                <li>{text}</li>
+              {t('home:martinezBio').split('&&').map((text, idx) => (
+                <li key={idx}>{text}</li>
               ))}
             </ul>
           </div>
@@ -43,8 +43,8 @@ const Team = ({ profiles }) => {
             <h5 className='marginBottomNull'>Jordi Sais Giralt</h5>
             <span className={styles.highlight}>{t('home:partner')}</span>
             <ul className={`topSpace ${styles.listBorder}`}>
-              {t('home:saisBio').split('&&').map((text) => (
-                <li>{text}</li>
+              {t('home:saisBio').split('&&').map((text, idx) => (
+                <li key={idx}>{text}</li>
               ))}
             </ul>
           </div>
@@ -56,8 +56,8 @@ const Team = ({ profiles }) => {
             <h5 className='marginBottomNull'>Joan Josep Gil Moretones</h5>
             <span className={styles.highlight}>{t('home:partner')}</span>
             <ul className={`topSpace ${styles.listBorder}`}>
-              {t('home:gilBio').split('&&').map((text) => (
-                <li>{text}</li>
+              {t('home:gilBio').split('&&').map((text, idx) => (
+                <li key={idx}>{text}</li>
               ))}
             </ul>
           </div>
@@ -68,48 +68,48 @@ const Team = ({ profiles }) => {
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Maica Rodriguez Sanchez</h5>
           <ul className={styles.listBorder}>
-            {t('home:rodriguezBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:rodriguezBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Silvia Fullà Soms</h5>
           <ul className={styles.listBorder}>
-            {t('home:fullaBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:fullaBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Maria Romera Moreno</h5>
           <ul className={styles.listBorder}>
-            {t('home:romeraBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:romeraBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Ana Maria Rubio Martínez</h5>
           <ul className={styles.listBorder}>
-            {t('home:rubioBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:rubioBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Olga Osipova</h5>
           <ul className={styles.listBorder}>
-            {t('home:osipovaBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:osipovaBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>
         <Col lg={3}>
           <h5 className={styles.highlightUnderline}>Montserrat Dominguez Buitrago</h5>
           <ul className={styles.listBorder}>
-            {t('home:dominguezBio').split('&&').map((text) => (
-              <li>{text}</li>
+            {t('home:dominguezBio').split('&&').map((text, idx) => (
+              <li key={idx}>{text}</li>
             ))}
           </ul>
         </Col>

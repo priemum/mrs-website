@@ -22,17 +22,13 @@ export default function Blogs({ blogs }) {
 
   return (
     <div className={styles.section}>
-      <Divider styles={styles}/>
-
-
       <div className={styles.textSection}>
-      <Divider styles={styles}/>
         <Container>
           <Row>
-            {blogs.map(blog => {
+            {blogs.map((blog, idx) => {
               if (router.locale == blog.fields.language) {
                 return (
-                  <Col md={6} lg={4} className='mb-4'>
+                  <Col md={6} lg={4} className='mb-4' key={idx}>
                     <BlogCard key={blog.sys.id} blog={blog}/>
                   </Col>
                 )

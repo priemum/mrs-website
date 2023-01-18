@@ -52,6 +52,7 @@ export default function Main({ sliderImgs, genericImg, profiles }) {
 
       {/* description */}
       <div className={styles.section}>
+        <span className={styles.brandName}>MRS ASSESSORS</span>
         <h1 className={styles.sectionTitle}>{t('home:title')}</h1>
         <span className={styles.sectionSubtitle}>{t('home:subtitle')}</span>
         <div className={styles.textSection}>
@@ -74,7 +75,7 @@ export default function Main({ sliderImgs, genericImg, profiles }) {
       <Divider styles={styles}/>
 
       {/* content tab */}
-      <div className={styles.section}>
+      <div id="content" className={styles.section}>
         <h2 className={styles.sectionTitle}>{t('home:work')}</h2>
         <div className={styles.textSection}>
           <Tabs defaultActiveKey="tab1">
@@ -82,8 +83,8 @@ export default function Main({ sliderImgs, genericImg, profiles }) {
               <div className={styles.scrollContent}>
                 <p>{t('home:tab1Content')}</p>
                 <ul>
-                  {t('home:tab1List').split('&&').map((text) => (
-                    <li>{text}</li>
+                  {t('home:tab1List').split('&&').map((text, idx) => (
+                    <li key={idx}>{text}</li>
                   ))}
                 </ul>
               </div>

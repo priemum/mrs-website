@@ -55,8 +55,13 @@ footer {
   color: #830b30!important;
 }
 
-.nav-link.active {
+#content .nav-link.active {
   background-color: #d6d6d6!important;
+  border-color: none!important;
+}
+
+/* attempt to deactivate tab boder on hover */
+#content .nav-tabs .nav-link:hover {
   border-color: none!important;
 }
 

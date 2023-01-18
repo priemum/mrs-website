@@ -14,6 +14,16 @@
   margin: 0 30px;
 }
 
+.brandName {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: #830b30;
+}
+
 .sectionTitle {
   width: 100%;
   text-align: center;

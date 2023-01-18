@@ -1,7 +1,9 @@
 .navbar {
   margin: 0px auto;
   padding: 0;
-  background-color: #b0b3b8;
+  background-color: #830b30;
+  border: none;
+  /* background-color: #b0b3b8; */
 }
 
 .navColor {

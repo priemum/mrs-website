@@ -3,6 +3,7 @@ import { createClient } from "contentful"
 import styles from '../styles/Home.module.css'
 import Divider from "../components/Divider"
 import Image from 'next/image'
+import { Navbar } from 'react-bootstrap'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -29,7 +30,7 @@ const About = ({ genericImg }) => {
   return (
     <div>
       <div className={styles.imageContainer}>
-        <Image src={'https:' + genericImg.fields.image.fields.file.url} width="100%" height="100%" layout="responsive" objectFit="cover" />
+        <Image src={'https:' + genericImg.fields.image.fields.file.url} width="100%" height="100%" layout="responsive" priority />
       </div>
       <Divider styles={styles}/>
       <div className={styles.section}>
