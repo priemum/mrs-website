@@ -20,7 +20,7 @@ export default function BlogCard({ blog }) {
       />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Subtitle className={`mb-2 text-muted ${styles.tags}`}>{ tags.join(' - ')}</Card.Subtitle>
+        <Card.Subtitle className={`mb-2 text-muted ${styles.tags}`}>{ tags && tags.join(' - ')}</Card.Subtitle>
         <Card.Text>
           {textPreview}
         </Card.Text>
