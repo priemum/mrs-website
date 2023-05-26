@@ -57,7 +57,7 @@ export default function BlogDetails({ blog }) {
         </div>
         <h2 className={styles.blogTitle}>{ title }</h2>
         <ul className={styles.listBorder}>
-          {tags.map(tag => (
+          {tags && tags.map(tag => (
             <li key={tag}>{ tag }</li>
           ))}
         </ul>
