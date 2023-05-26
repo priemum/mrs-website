@@ -25,7 +25,7 @@ export default function Blogs({ blogs }) {
       <div className={styles.textSection}>
         <Container>
           <Row>
-            {blogs.map((blog, idx) => {
+            {blogs && blogs.map((blog, idx) => {
               if (router.locale == blog.fields.language) {
                 return (
                   <Col md={6} lg={4} className='mb-4' key={idx}>
