@@ -19,19 +19,19 @@ const Footer = ({ styles }) => {
             <h5>{t('common:footerContact')}</h5>
             <ul>
               <li>
-                <i className={styles.footerIcon}><TelephoneFill color='#830b30' /></i>
+                <i className={styles.footerIcon}><TelephoneFill color='#fff' size={12}/></i>
                 972371821
               </li>
               <li>
-                <i className={styles.footerIcon}><TelephoneFill color='#830b30' /></i>
+                <i className={styles.footerIcon}><TelephoneFill color='#fff' size={12}/></i>
                 972372240
               </li>
               <li>
-                <i className={styles.footerIcon}><EnvelopeFill color='#830b30' /></i>
+                <i className={styles.footerIcon}><EnvelopeFill color='#fff' size={12}/></i>
                 administracio@mrsassessors.com
               </li>
               <li>
-                <i className={styles.footerIcon}><ShieldLockFill color='#830b30' /></i>
+                <i className={styles.footerIcon}><ShieldLockFill color='#fff' size={12}/></i>
                 <Link href="/policy"><a className={styles.footerLink}>{t('common:privacyPolicy')}</a></Link>
               </li>
             </ul>
