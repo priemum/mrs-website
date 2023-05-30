@@ -1,6 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { Container, Row, Col, Tabs, Tab, Card, Button } from 'react-bootstrap'
 import Slider from '../components/Slider'
+import { PersonCircle } from 'react-bootstrap-icons';
 import { createClient } from "contentful"
 import styles from '../styles/Home.module.css'
 import Divider from "../components/Divider"
@@ -27,6 +28,8 @@ export async function getStaticProps() {
     martinez: null
   }
 
+  const employeesData = await client.getEntries({ content_type: 'employees'})
+
   profileData.items.map((profile) => {
     profiles[profile.fields.profileName] = profile.fields.profile.fields.file.url
   })
@@ -35,12 +38,13 @@ export async function getStaticProps() {
     props: {
       sliderImgs: slides.items,
       genericImg: genericImages.items[0],
-      profiles
+      profiles,
+      employees: employeesData.items,
     }
   }
 }
 
-export default function Main({ sliderImgs, genericImg, profiles }) {
+export default function Main({ sliderImgs, genericImg, profiles, employees }) {
 
   const { t } = useTranslation()
 
@@ -66,10 +70,30 @@ export default function Main({ sliderImgs, genericImg, profiles }) {
               <Col md={6}>
                 <p>{t('home:body1')}</p>
                 <p>{t('home:body2')}</p>
+                
+              
               </Col>
             </Row>
           </Container>
+          
         </div>
+      </div>
+      <div className={styles.section}>
+      <Container className="d-flex justify-content-center">
+        <div className={`${styles.portalSection} mx-5`}>
+          <Button className={`${styles.btnPortal} me-3`} href="https://clients.gestoriabarcons.es">
+            <PersonCircle size={80}/>    
+          </Button>
+          {t('home:clientsPortal')}
+        </div>
+
+        <div className={`${styles.portalSection} mx-5`}>
+          <Button className={`${styles.btnPortal} me-3`} href="https://treballadors.gestoriabarcons.es">
+            <PersonCircle size={80}/>    
+          </Button>
+          {t('home:employeePortal')}
+        </div>
+      </Container>
       </div>
       <span id="work" />
       <Divider styles={styles}/>
@@ -179,7 +203,7 @@ export default function Main({ sliderImgs, genericImg, profiles }) {
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>{t('common:team')}</h2>
         <div className={styles.textSection}>
-          <Team profiles={profiles} />
+          <Team profiles={profiles} employees={employees} />
         </div>
       </div>
       <span id="contact" />

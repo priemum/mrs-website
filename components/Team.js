@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Image from 'next/image'
 import Divider from './Divider'
 
-const Team = ({ profiles }) => {
+const Team = ({ profiles, employees }) => {
 
   const { t } = useTranslation()
 
@@ -113,7 +113,18 @@ const Team = ({ profiles }) => {
             ))}
           </ul>
         </Col>
+        {employees && employees?.map((employee) => (
+          <Col lg={3}>
+            <h5 className={styles.highlightUnderline}>{employee.fields.name}</h5>
+            <ul className={styles.listBorder}>
+              {t('home:dominguezBio').split('&&').map((text, idx) => (
+                <li key={idx}>{text}</li>
+              ))}
+            </ul>
+          </Col>
+        ))}
       </Row>
+     
     </Container>
   )
 }

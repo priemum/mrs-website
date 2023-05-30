@@ -1,5 +1,5 @@
 .divider {
-  height: 50px;
+  height: 40px;
 }
 
 .smallDivider {
@@ -133,4 +133,29 @@
     font-weight: bold;
 
     color: #830b30;
+  }
+
+.portalSection {
+  font-size: 18px;
+}
+
+.btnPortal {
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  border: none;
+  padding: 5px 5px
+  
+}
+  .btnPortal:hover {
+    background-color: #830b30;
+  }
+  .btnPortal:active {
+    background-color: #830b30;
+  }
+  .btnPortal:focus {
+    background-color: #830b30;
+    box-shadow: none;
+  }
+  .btnPortal:focus:active {
+    box-shadow: none;
   }
