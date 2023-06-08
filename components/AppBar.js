@@ -28,8 +28,9 @@ const AppBar = ({ styles }) => {
         <div className='d-flex justify-content-end'>
           {router.locales.map((locale) => (
             <span key={locale} className={styles.translateLink} >
+              {/* navigate back to language specific blogs if language changes */}
               <Link
-                href={router.asPath}
+                href={router.asPath.startsWith("/blogs/") ? "/blogs" : router.asPath}
                 locale={locale}
               >
                 <a>{locale}</a>
