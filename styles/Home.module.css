@@ -137,6 +137,9 @@
 
 .portalSection {
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .btnPortal {
@@ -159,3 +162,28 @@
   .btnPortal:focus:active {
     box-shadow: none;
   }
+
+.portalBtnGroup {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+  .portalBtnGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portalSection {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    
+  }
+  .portalSection:nth-child(1) {
+    justify-content: flex-end;
+  }
+  .portalSection:nth-child(2) {
+    justify-content: flex-start;
+  }
+}
+/* 768px */

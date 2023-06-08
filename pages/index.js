@@ -40,7 +40,8 @@ export async function getStaticProps() {
       genericImg: genericImages.items[0],
       profiles,
       employees: employeesData.items,
-    }
+    },
+    revalidate: 1,
   }
 }
 
@@ -79,19 +80,19 @@ export default function Main({ sliderImgs, genericImg, profiles, employees }) {
         </div>
       </div>
       <div className={styles.section}>
-      <Container className="d-flex justify-content-center">
+      <Container className={styles.portalBtnGroup}>
         <div className={`${styles.portalSection} mx-5`}>
-          <Button className={`${styles.btnPortal} me-3`} href="https://clients.gestoriabarcons.es">
-            <PersonCircle size={80}/>    
+          <Button className={`${styles.btnPortal} me-3`} href="https://app.kabiku.es/login/?next=/">
+            <PersonCircle size={60}/>    
           </Button>
-          {t('home:clientsPortal')}
+          <p>{t('home:clientsPortal')}</p>
         </div>
 
         <div className={`${styles.portalSection} mx-5`}>
-          <Button className={`${styles.btnPortal} me-3`} href="https://treballadors.gestoriabarcons.es">
-            <PersonCircle size={80}/>    
+          <Button className={`${styles.btnPortal} me-3`} href="https://app.kabiku.es/login/?next=/">
+            <PersonCircle size={60}/>    
           </Button>
-          {t('home:employeePortal')}
+          <p>{t('home:employeePortal')}</p>
         </div>
       </Container>
       </div>

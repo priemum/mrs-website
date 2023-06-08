@@ -65,61 +65,17 @@ const Team = ({ profiles, employees }) => {
       </Row>
       <Divider styles={styles} />
       <Row>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Maica Rodriguez Sanchez</h5>
-          <ul className={styles.listBorder}>
-            {t('home:rodriguezBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Silvia Fullà Soms</h5>
-          <ul className={styles.listBorder}>
-            {t('home:fullaBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Maria Romera Moreno</h5>
-          <ul className={styles.listBorder}>
-            {t('home:romeraBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Ana Maria Rubio Martínez</h5>
-          <ul className={styles.listBorder}>
-            {t('home:rubioBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Olga Osipova</h5>
-          <ul className={styles.listBorder}>
-            {t('home:osipovaBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        <Col lg={3}>
-          <h5 className={styles.highlightUnderline}>Montserrat Dominguez Buitrago</h5>
-          <ul className={styles.listBorder}>
-            {t('home:dominguezBio').split('&&').map((text, idx) => (
-              <li key={idx}>{text}</li>
-            ))}
-          </ul>
-        </Col>
-        {employees && employees?.map((employee) => (
-          <Col lg={3}>
+        {employees && employees?.map((employee, idx) => (
+          <Col key={idx} lg={3}>
             <h5 className={styles.highlightUnderline}>{employee.fields.name}</h5>
             <ul className={styles.listBorder}>
-              {t('home:dominguezBio').split('&&').map((text, idx) => (
+              <li>{employee.fields[`role_${t('home:language')}`]}</li>
+              <li>{employee.fields[`department_${t('home:language')}`]}</li>
+              <li>E-mail: {employee.fields.email}</li>
+            
+              {/* {t('home:dominguezBio').split('&&').map((text, idx) => (
                 <li key={idx}>{text}</li>
-              ))}
+              ))} */}
             </ul>
           </Col>
         ))}

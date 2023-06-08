@@ -19,7 +19,8 @@ export async function getStaticProps() {
   return {
     props: {
       genericImg: genericImages.items[0],
-    }
+    },
+    revalidate: 1,
   }
 }
 

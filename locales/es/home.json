@@ -1,4 +1,5 @@
 {
+  "language": "es",
   "title": "Abogados y Consultores",
   "subtitle": "Especialistas en Función Pública y Derecho Administrativo",
   "body1": "El grupo MRS Assessors tiene más de 20 años de experiencia prestando asesoramiento jurídico, fiscal y tributario, contable, laboral, inmobiliario y de seguros en Lloret de Mar y Girona para empresas, particulares y administraciones públicas.",
@@ -39,12 +40,6 @@
   "martinezBio": "Licenciado en Derecho por la Universidad de Navarra&&Master en Tributación y Asesoría Fiscal&&Diploma de Estudios Avanzados en Derecho Financiero y Tributario&&Profesor de Derecho Tributario Universidad de Girona&&Asesor Tributario en diferentes entes locales y abogado especialista en la jurisdicción contencioso administrativa&&E-mail: sebastian@mrsassessors.com",
   "saisBio": "Licenciado en Derecho por la UNED&&Especializado en asesoramiento y defensa jurídica civil, laboral y administrativo, especialmente en materia urbanística&&Asesor urbanístico en diferentes entes locales&&E-mail: jordi@mrsassessors.com",
   "gilBio": "Licenciado en Derecho por la Universidad Pompeu Fabra&&Master en Abogacía por la Universidad de Girona&&Postgrado en Comunicación Política e Institucional por el Instituto de Ciencias Políticas y Sociales (UAB)&&Diploma de especialización en el sector inmobiliario AICAT por la Fundación Universidad de Girona y el Colegio de Agentes de la Propiedad Inmobiliaria de Girona&&Curso “Practica Administrativa y Procesal Laboral” por el Centro de Estudios Financieros&&Curso monográfico “Comunidades de propietarios y administradores de fincas” por el Centro de Estudios Financieros&&E-mail: juridic@mrsassessors.com",
-  "rodriguezBio": "Administrativa&&Departamento Laboral&&E-mail: laboral@mrsassessors.com",
-  "fullaBio": "Administrativa&&Departamento Fiscal y Contable&&E-mail: fiscal@mrsassessors.com",
-  "romeraBio": "Administrativa&&Departamento Administración de Fincas&&E-mail: comunitats@mrsassessors.com",
-  "rubioBio": "Administrativa&&Departamento Seguros&&E-mail: assegurances@mrsassessors.com",
-  "osipovaBio": "Administrativa&&Departamento Inmobiliario&&E-mail: finques@mrsassessors.com",
-  "dominguezBio": "Comercial&&Departamento Inmobiliario&&E-mail: comercial@mrsassessors.com",
   "sendEmailBtn": "Envianos un email",
   "office1": "Asesoría Contable, Fiscal, Laboral, Jurídica y Mercantil. Gestoría y Seguros.",
   "office2": "Asesoría Inmobiliaria y Administración de Fincas.",

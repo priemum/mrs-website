@@ -13,7 +13,8 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({ content_type: 'mrsBlog' })
   return {
-    props: { blogs: res.items }
+    props: { blogs: res.items },
+    revalidate: 1,
   }
 }
 
