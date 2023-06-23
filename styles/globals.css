@@ -72,3 +72,18 @@ footer {
 .topSpace {
   margin-top: 10px;
 }
+
+.navbar-toggler {
+  border-color: white!important;
+}
+
+.navbar-toggler:active {
+  box-shadow: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.collapse-button {
+  color: white;
+}

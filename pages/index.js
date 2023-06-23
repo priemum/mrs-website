@@ -79,23 +79,7 @@ export default function Main({ sliderImgs, genericImg, profiles, employees }) {
           
         </div>
       </div>
-      <div className={styles.section}>
-      <Container className={styles.portalBtnGroup}>
-        <div className={`${styles.portalSection} mx-5`}>
-          <Button className={`${styles.btnPortal} me-3`} href="https://app.kabiku.es/login/?next=/">
-            <PersonCircle size={60}/>    
-          </Button>
-          <p>{t('home:clientsPortal')}</p>
-        </div>
-
-        <div className={`${styles.portalSection} mx-5`}>
-          <Button className={`${styles.btnPortal} me-3`} href="https://app.kabiku.es/login/?next=/">
-            <PersonCircle size={60}/>    
-          </Button>
-          <p>{t('home:employeePortal')}</p>
-        </div>
-      </Container>
-      </div>
+ 
       <span id="work" />
       <Divider styles={styles}/>
 

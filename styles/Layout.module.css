@@ -52,3 +52,35 @@
   text-align: center;
   padding-bottom: 20px;
 }
+
+.btnPortal {
+  /* border-radius: 25px;
+  background-color: #d6d6d6; */
+  background-color: transparent;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 25px;
+  
+}
+  .btnPortal:hover {
+    color: #830b30;
+    background-color: white;
+  }
+  .btnPortal:active {
+    color: #830b30;
+    background-color: white;
+  }
+  .btnPortal:focus {
+    color: #830b30;
+    background-color: white;
+    box-shadow: none;
+  }
+  .btnPortal:focus:active {
+    box-shadow: none;
+  }
+
+.portalGroup {
+  /* border-right: 1px solid blue; */
+  border-right: 2px solid white;
+  padding-right: 20px;
+}
