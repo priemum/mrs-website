@@ -35,14 +35,13 @@ const AppBar = ({ styles }) => {
             <Button className={`${styles.btnPortal} me-2`} href="https://app.kabiku.es/login/?next=/">
               <PersonCircle size={32}/>    
             </Button>
-            <span className="d-none d-xxl-block" style={{ color: "white"}}>{t('home:employeePortal')}</span>
+            <span className="d-none d-xxl-block" style={{ color: "white"}}>{t('common:employeePortal')}</span>
             </div>
-            {/* <span style={{ color: "white"}}>{t('home:employeePortal')}</span> */}
             <div className="d-flex align-items-center">
             <Button className={`${styles.btnPortal} me-2`} href="https://app.kabiku.es/login/?next=/">
               <BriefcaseFill size={30}/>    
             </Button>
-            <span className="d-none d-xxl-block" style={{ color: "white"}}>{t('home:clientsPortal')}</span>
+            <span className="d-none d-xxl-block" style={{ color: "white"}}>{t('common:clientsPortal')}</span>
             </div>
           </div>
           <div className='d-flex justify-content-end'>
