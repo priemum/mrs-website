@@ -249,27 +249,6 @@ export default function Main({ sliderImgs, genericImg, profiles, employees }) {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col>
-                <Card>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.0794710427367!2d2.818731915833568!3d41.97710347921451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae6d90606a499%3A0x61d8c354d402d905!2sCarrer%20Migdia%2C%2016%2C%203%C2%BA%2C%2017002%20Girona!5e0!3m2!1sen!2ses!4v1641166628277!5m2!1sen!2ses"
-                    className={styles.mapsEmbed}
-                    allowFullScreen=""
-                    loading="lazy"
-                  />
-                  <Card.Body>
-                    <Card.Title>Sucursal Girona</Card.Title>
-                    <Card.Text>{t('home:office3')}</Card.Text>
-                    <hr />
-                    <Card.Text>
-                      Calle Migdia, núm. 16 4º 3º. 17002 Girona
-                    </Card.Text>
-                    <Link href='https://goo.gl/maps/F7DsjTr5Jiwjzp7x8'>
-                      <Button className={styles.styledButton}>Mapa</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </Col>
             </Row>
           </Container>
         </div>

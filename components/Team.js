@@ -50,17 +50,6 @@ const Team = ({ profiles, employees }) => {
           </div>
         </Col>
         <Col>
-          {/* no need for mb-5 here because we are using the Divider */}
-          <div>
-            <Image src={'https:' + profiles.gil} width={200} height={150}/>
-            <h5 className='marginBottomNull'>Joan Josep Gil Moretones</h5>
-            <span className={styles.highlight}>{t('home:partner')}</span>
-            <ul className={`topSpace ${styles.listBorder}`}>
-              {t('home:gilBio').split('&&').map((text, idx) => (
-                <li key={idx}>{text}</li>
-              ))}
-            </ul>
-          </div>
         </Col>
       </Row>
       <Divider styles={styles} />
